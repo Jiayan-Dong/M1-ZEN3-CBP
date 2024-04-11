@@ -1,0 +1,660 @@
+
+b64.o:     file format elf64-x86-64
+
+
+Disassembly of section .rand_branch:
+
+0000000000000000 <rand_branch>:
+   0:	e9 00 00 00 00       	jmp    5 <syscall_close+0x2>
+
+Disassembly of section .data:
+
+0000000000000000 <CounterTypesDesired>:
+       0:	c8 00 00 00          	enter  $0x0,$0x0
+       4:	cc                   	int3   
+	...
+
+0000000000000040 <ThreadData>:
+	...
+
+0000000000000064 <CustomCountTemp>:
+	...
+
+0000000000000088 <CountOverhead>:
+      88:	ff                   	(bad)  
+      89:	ff                   	(bad)  
+      8a:	ff                   	(bad)  
+      8b:	ff                   	(bad)  
+      8c:	ff                   	(bad)  
+      8d:	ff                   	(bad)  
+      8e:	ff                   	(bad)  
+      8f:	ff                   	(bad)  
+      90:	ff                   	(bad)  
+      91:	ff                   	(bad)  
+      92:	ff                   	(bad)  
+      93:	ff                   	(bad)  
+      94:	ff                   	(bad)  
+      95:	ff                   	(bad)  
+      96:	ff                   	(bad)  
+      97:	ff                   	(bad)  
+      98:	ff                   	(bad)  
+      99:	ff                   	(bad)  
+      9a:	ff                   	(bad)  
+      9b:	ff                   	(bad)  
+      9c:	ff                   	(bad)  
+      9d:	ff                   	(bad)  
+      9e:	ff                   	(bad)  
+      9f:	ff                   	(bad)  
+      a0:	ff                   	(bad)  
+      a1:	ff                   	(bad)  
+      a2:	ff                   	(bad)  
+      a3:	ff                   	(bad)  
+      a4:	ff                   	(bad)  
+      a5:	ff                   	(bad)  
+      a6:	ff                   	(bad)  
+      a7:	ff                   	(bad)  
+      a8:	ff                   	(bad)  
+      a9:	ff                   	(bad)  
+      aa:	ff                   	(bad)  
+      ab:	ff                 	incl   (%rax)
+
+00000000000000ac <ClockResults>:
+	...
+
+00000000000000fc <CustomClockResults>:
+	...
+
+000000000000014c <PMCResults>:
+	...
+
+00000000000003cc <CustomPMCResults>:
+	...
+
+0000000000000650 <RSPSave>:
+	...
+
+0000000000000680 <PThreadData>:
+	...
+
+0000000000000688 <NumCounters>:
+     688:	00 00                	add    %al,(%rax)
+	...
+
+000000000000068c <MaxNumCounters>:
+     68c:	08 00                	or     %al,(%rax)
+	...
+
+0000000000000690 <UsePMC>:
+     690:	01 00                	add    %eax,(%rax)
+	...
+
+0000000000000694 <PrintCustomPMC>:
+     694:	00 00                	add    %al,(%rax)
+	...
+
+0000000000000698 <NumThreads>:
+     698:	01 00                	add    %eax,(%rax)
+	...
+
+000000000000069c <ThreadDataSize>:
+     69c:	40 06                	rex (bad) 
+	...
+
+00000000000006a0 <ClockResultsOS>:
+     6a0:	6c                   	insb   (%dx),%es:(%rdi)
+     6a1:	00 00                	add    %al,(%rax)
+	...
+
+00000000000006a4 <CustomClockResultsOS>:
+     6a4:	bc 00 00 00        	mov    $0xc000000,%esp
+
+00000000000006a8 <PMCResultsOS>:
+     6a8:	0c 01                	or     $0x1,%al
+	...
+
+00000000000006ac <CustomPMCResultsOS>:
+     6ac:	8c 03                	mov    %es,(%rbx)
+	...
+
+00000000000006b0 <Counters>:
+	...
+
+00000000000006d0 <EventRegistersUsed>:
+	...
+
+00000000000006f0 <RatioOut>:
+	...
+
+0000000000000700 <TempOut>:
+     700:	00 00                	add    %al,(%rax)
+	...
+
+0000000000000704 <RatioOutTitle>:
+	...
+
+000000000000070c <TempOutTitle>:
+	...
+
+0000000000000740 <UserData>:
+	...
+
+0000000000800740 <TempData>:
+	...
+
+0000000000800760 <msr_file_name>:
+  800760:	2f                   	(bad)  
+  800761:	64 65 76 2f          	fs gs jbe 800794 <inputGen_counter+0x1d>
+  800765:	63 70 75             	movsxd 0x75(%rax),%esi
+  800768:	2f                   	(bad)  
+  800769:	30 2f                	xor    %ch,(%rdi)
+  80076b:	6d                   	insl   (%dx),%es:(%rdi)
+  80076c:	73 72                	jae    8007e0 <inputGen_counter+0x69>
+	...
+
+000000000080076f <data>:
+  80076f:	01 00                	add    %eax,(%rax)
+	...
+
+0000000000800773 <thread_lock>:
+  800773:	00 00                	add    %al,(%rax)
+	...
+
+0000000000800777 <inputGen_counter>:
+  800777:	00 00                	add    %al,(%rax)
+	...
+
+Disassembly of section .text:
+
+0000000000000000 <TestLoop>:
+   0:	53                   	push   %rbx
+   1:	55                   	push   %rbp
+   2:	41 54                	push   %r12
+   4:	41 55                	push   %r13
+   6:	41 56                	push   %r14
+   8:	41 57                	push   %r15
+   a:	41 89 ff             	mov    %edi,%r15d
+   d:	b9 10 27 00 00       	mov    $0x2710,%ecx
+  12:	b8 01 00 00 00       	mov    $0x1,%eax
+  17:	90                   	nop
+  18:	90                   	nop
+  19:	90                   	nop
+  1a:	90                   	nop
+  1b:	90                   	nop
+  1c:	90                   	nop
+  1d:	90                   	nop
+  1e:	90                   	nop
+  1f:	90                   	nop
+
+0000000000000020 <Warmuploop>:
+  20:	0f af c1             	imul   %ecx,%eax
+  23:	0f af c1             	imul   %ecx,%eax
+  26:	0f af c1             	imul   %ecx,%eax
+  29:	0f af c1             	imul   %ecx,%eax
+  2c:	0f af c1             	imul   %ecx,%eax
+  2f:	0f af c1             	imul   %ecx,%eax
+  32:	0f af c1             	imul   %ecx,%eax
+  35:	0f af c1             	imul   %ecx,%eax
+  38:	0f af c1             	imul   %ecx,%eax
+  3b:	0f af c1             	imul   %ecx,%eax
+  3e:	ff c9                	dec    %ecx
+  40:	75 de                	jne    20 <Warmuploop>
+  42:	9b db e3             	finit  
+  45:	c5 fc 77             	vzeroall 
+  48:	41 69 c7 00 04 00 00 	imul   $0x400,%r15d,%eax
+  4f:	48 8d 35 00 00 00 00 	lea    0x0(%rip),%rsi        # 56 <Warmuploop+0x36>
+  56:	48 01 c6             	add    %rax,%rsi
+  59:	48 8d be 00 02 00 00 	lea    0x200(%rsi),%rdi
+  60:	31 ed                	xor    %ebp,%ebp
+  62:	4c 8d 2d 00 00 00 00 	lea    0x0(%rip),%r13        # 69 <Warmuploop+0x49>
+  69:	41 69 c7 40 06 00 00 	imul   $0x640,%r15d,%eax
+  70:	49 01 c5             	add    %rax,%r13
+  73:	49 89 a5 10 06 00 00 	mov    %rsp,0x610(%r13)
+  7a:	45 31 f6             	xor    %r14d,%r14d
+
+000000000000007d <TEST_LOOP_1>:
+  7d:	31 c0                	xor    %eax,%eax
+  7f:	0f a2                	cpuid  
+  81:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 87 <TEST_LOOP_1+0xa>
+  87:	0f 33                	rdpmc  
+  89:	41 89 45 04          	mov    %eax,0x4(%r13)
+  8d:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 93 <TEST_LOOP_1+0x16>
+  93:	0f 33                	rdpmc  
+  95:	41 89 45 08          	mov    %eax,0x8(%r13)
+  99:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 9f <TEST_LOOP_1+0x22>
+  9f:	0f 33                	rdpmc  
+  a1:	41 89 45 0c          	mov    %eax,0xc(%r13)
+  a5:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # ab <TEST_LOOP_1+0x2e>
+  ab:	0f 33                	rdpmc  
+  ad:	41 89 45 10          	mov    %eax,0x10(%r13)
+  b1:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # b7 <TEST_LOOP_1+0x3a>
+  b7:	0f 33                	rdpmc  
+  b9:	41 89 45 14          	mov    %eax,0x14(%r13)
+  bd:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # c3 <TEST_LOOP_1+0x46>
+  c3:	0f 33                	rdpmc  
+  c5:	41 89 45 18          	mov    %eax,0x18(%r13)
+  c9:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # cf <TEST_LOOP_1+0x52>
+  cf:	0f 33                	rdpmc  
+  d1:	41 89 45 1c          	mov    %eax,0x1c(%r13)
+  d5:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # db <TEST_LOOP_1+0x5e>
+  db:	0f 33                	rdpmc  
+  dd:	41 89 45 20          	mov    %eax,0x20(%r13)
+  e1:	31 c0                	xor    %eax,%eax
+  e3:	0f a2                	cpuid  
+  e5:	0f 31                	rdtsc  
+  e7:	41 89 45 00          	mov    %eax,0x0(%r13)
+  eb:	31 c0                	xor    %eax,%eax
+  ed:	0f a2                	cpuid  
+  ef:	31 c0                	xor    %eax,%eax
+  f1:	0f a2                	cpuid  
+  f3:	0f 31                	rdtsc  
+  f5:	41 29 45 00          	sub    %eax,0x0(%r13)
+  f9:	31 c0                	xor    %eax,%eax
+  fb:	0f a2                	cpuid  
+  fd:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 103 <TEST_LOOP_1+0x86>
+ 103:	0f 33                	rdpmc  
+ 105:	41 29 45 04          	sub    %eax,0x4(%r13)
+ 109:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 10f <TEST_LOOP_1+0x92>
+ 10f:	0f 33                	rdpmc  
+ 111:	41 29 45 08          	sub    %eax,0x8(%r13)
+ 115:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 11b <TEST_LOOP_1+0x9e>
+ 11b:	0f 33                	rdpmc  
+ 11d:	41 29 45 0c          	sub    %eax,0xc(%r13)
+ 121:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 127 <TEST_LOOP_1+0xaa>
+ 127:	0f 33                	rdpmc  
+ 129:	41 29 45 10          	sub    %eax,0x10(%r13)
+ 12d:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 133 <TEST_LOOP_1+0xb6>
+ 133:	0f 33                	rdpmc  
+ 135:	41 29 45 14          	sub    %eax,0x14(%r13)
+ 139:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 13f <TEST_LOOP_1+0xc2>
+ 13f:	0f 33                	rdpmc  
+ 141:	41 29 45 18          	sub    %eax,0x18(%r13)
+ 145:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 14b <TEST_LOOP_1+0xce>
+ 14b:	0f 33                	rdpmc  
+ 14d:	41 29 45 1c          	sub    %eax,0x1c(%r13)
+ 151:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 157 <TEST_LOOP_1+0xda>
+ 157:	0f 33                	rdpmc  
+ 159:	41 29 45 20          	sub    %eax,0x20(%r13)
+ 15d:	31 c0                	xor    %eax,%eax
+ 15f:	0f a2                	cpuid  
+ 161:	41 8b 45 00          	mov    0x0(%r13),%eax
+ 165:	f7 d8                	neg    %eax
+ 167:	41 8b 5d 48          	mov    0x48(%r13),%ebx
+ 16b:	39 d8                	cmp    %ebx,%eax
+ 16d:	0f 42 d8             	cmovb  %eax,%ebx
+ 170:	41 89 5d 48          	mov    %ebx,0x48(%r13)
+ 174:	41 8b 45 04          	mov    0x4(%r13),%eax
+ 178:	f7 d8                	neg    %eax
+ 17a:	41 8b 5d 4c          	mov    0x4c(%r13),%ebx
+ 17e:	39 d8                	cmp    %ebx,%eax
+ 180:	0f 42 d8             	cmovb  %eax,%ebx
+ 183:	41 89 5d 4c          	mov    %ebx,0x4c(%r13)
+ 187:	41 8b 45 08          	mov    0x8(%r13),%eax
+ 18b:	f7 d8                	neg    %eax
+ 18d:	41 8b 5d 50          	mov    0x50(%r13),%ebx
+ 191:	39 d8                	cmp    %ebx,%eax
+ 193:	0f 42 d8             	cmovb  %eax,%ebx
+ 196:	41 89 5d 50          	mov    %ebx,0x50(%r13)
+ 19a:	41 8b 45 0c          	mov    0xc(%r13),%eax
+ 19e:	f7 d8                	neg    %eax
+ 1a0:	41 8b 5d 54          	mov    0x54(%r13),%ebx
+ 1a4:	39 d8                	cmp    %ebx,%eax
+ 1a6:	0f 42 d8             	cmovb  %eax,%ebx
+ 1a9:	41 89 5d 54          	mov    %ebx,0x54(%r13)
+ 1ad:	41 8b 45 10          	mov    0x10(%r13),%eax
+ 1b1:	f7 d8                	neg    %eax
+ 1b3:	41 8b 5d 58          	mov    0x58(%r13),%ebx
+ 1b7:	39 d8                	cmp    %ebx,%eax
+ 1b9:	0f 42 d8             	cmovb  %eax,%ebx
+ 1bc:	41 89 5d 58          	mov    %ebx,0x58(%r13)
+ 1c0:	41 8b 45 14          	mov    0x14(%r13),%eax
+ 1c4:	f7 d8                	neg    %eax
+ 1c6:	41 8b 5d 5c          	mov    0x5c(%r13),%ebx
+ 1ca:	39 d8                	cmp    %ebx,%eax
+ 1cc:	0f 42 d8             	cmovb  %eax,%ebx
+ 1cf:	41 89 5d 5c          	mov    %ebx,0x5c(%r13)
+ 1d3:	41 8b 45 18          	mov    0x18(%r13),%eax
+ 1d7:	f7 d8                	neg    %eax
+ 1d9:	41 8b 5d 60          	mov    0x60(%r13),%ebx
+ 1dd:	39 d8                	cmp    %ebx,%eax
+ 1df:	0f 42 d8             	cmovb  %eax,%ebx
+ 1e2:	41 89 5d 60          	mov    %ebx,0x60(%r13)
+ 1e6:	41 8b 45 1c          	mov    0x1c(%r13),%eax
+ 1ea:	f7 d8                	neg    %eax
+ 1ec:	41 8b 5d 64          	mov    0x64(%r13),%ebx
+ 1f0:	39 d8                	cmp    %ebx,%eax
+ 1f2:	0f 42 d8             	cmovb  %eax,%ebx
+ 1f5:	41 89 5d 64          	mov    %ebx,0x64(%r13)
+ 1f9:	41 8b 45 20          	mov    0x20(%r13),%eax
+ 1fd:	f7 d8                	neg    %eax
+ 1ff:	41 8b 5d 68          	mov    0x68(%r13),%ebx
+ 203:	39 d8                	cmp    %ebx,%eax
+ 205:	0f 42 d8             	cmovb  %eax,%ebx
+ 208:	41 89 5d 68          	mov    %ebx,0x68(%r13)
+ 20c:	41 ff c6             	inc    %r14d
+ 20f:	41 83 fe 04          	cmp    $0x4,%r14d
+ 213:	0f 82 64 fe ff ff    	jb     7d <TEST_LOOP_1>
+ 219:	45 31 f6             	xor    %r14d,%r14d
+
+000000000000021c <TEST_LOOP_2>:
+ 21c:	c7 05 00 00 00 00 01 	movl   $0x1,0x0(%rip)        # 226 <TEST_LOOP_2+0xa>
+ 223:	00 00 00 
+ 226:	bb 40 1f 00 00       	mov    $0x1f40,%ebx
+ 22b:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 232 <rand_loop>
+
+0000000000000232 <rand_loop>:
+ 232:	0f c7 f0             	rdrand %eax
+ 235:	83 e0 01             	and    $0x1,%eax
+ 238:	88 07                	mov    %al,(%rdi)
+ 23a:	48 ff c7             	inc    %rdi
+ 23d:	ff cb                	dec    %ebx
+ 23f:	75 f1                	jne    232 <rand_loop>
+ 241:	31 c0                	xor    %eax,%eax
+ 243:	0f a2                	cpuid  
+ 245:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 24b <rand_loop+0x19>
+ 24b:	0f 33                	rdpmc  
+ 24d:	41 89 45 04          	mov    %eax,0x4(%r13)
+ 251:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 257 <rand_loop+0x25>
+ 257:	0f 33                	rdpmc  
+ 259:	41 89 45 08          	mov    %eax,0x8(%r13)
+ 25d:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 263 <rand_loop+0x31>
+ 263:	0f 33                	rdpmc  
+ 265:	41 89 45 0c          	mov    %eax,0xc(%r13)
+ 269:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 26f <rand_loop+0x3d>
+ 26f:	0f 33                	rdpmc  
+ 271:	41 89 45 10          	mov    %eax,0x10(%r13)
+ 275:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 27b <rand_loop+0x49>
+ 27b:	0f 33                	rdpmc  
+ 27d:	41 89 45 14          	mov    %eax,0x14(%r13)
+ 281:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 287 <rand_loop+0x55>
+ 287:	0f 33                	rdpmc  
+ 289:	41 89 45 18          	mov    %eax,0x18(%r13)
+ 28d:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 293 <rand_loop+0x61>
+ 293:	0f 33                	rdpmc  
+ 295:	41 89 45 1c          	mov    %eax,0x1c(%r13)
+ 299:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 29f <rand_loop+0x6d>
+ 29f:	0f 33                	rdpmc  
+ 2a1:	41 89 45 20          	mov    %eax,0x20(%r13)
+ 2a5:	31 c0                	xor    %eax,%eax
+ 2a7:	0f a2                	cpuid  
+ 2a9:	0f 31                	rdtsc  
+ 2ab:	41 89 45 00          	mov    %eax,0x0(%r13)
+ 2af:	31 c0                	xor    %eax,%eax
+ 2b1:	0f a2                	cpuid  
+
+00000000000002b3 <Test_start>:
+ 2b3:	48 8d 3d 00 00 00 00 	lea    0x0(%rip),%rdi        # 2ba <Test_start+0x7>
+ 2ba:	41 bc e8 03 00 00    	mov    $0x3e8,%r12d
+
+00000000000002c0 <REPETITIONS1LOOP>:
+ 2c0:	48 ff c7             	inc    %rdi
+ 2c3:	80 3f 00             	cmpb   $0x0,(%rdi)
+ 2c6:	74 00                	je     2c8 <target1>
+
+00000000000002c8 <target1>:
+ 2c8:	e9 00 00 00 00       	jmp    2cd <rand_branch_back>
+
+00000000000002cd <rand_branch_back>:
+ 2cd:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 2d4 <rand_branch_back+0x7>
+ 2d4:	48 89 1d 00 00 00 00 	mov    %rbx,0x0(%rip)        # 2db <rand_branch_back+0xe>
+ 2db:	48 89 0d 00 00 00 00 	mov    %rcx,0x0(%rip)        # 2e2 <rand_branch_back+0x15>
+ 2e2:	48 89 15 00 00 00 00 	mov    %rdx,0x0(%rip)        # 2e9 <rand_branch_back+0x1c>
+ 2e9:	31 c0                	xor    %eax,%eax
+ 2eb:	0f a2                	cpuid  
+ 2ed:	48 31 c9             	xor    %rcx,%rcx
+ 2f0:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 2f6 <rand_branch_back+0x29>
+ 2f6:	0f 33                	rdpmc  
+ 2f8:	41 89 45 28          	mov    %eax,0x28(%r13)
+
+00000000000002fc <debug_counter_0_0>:
+ 2fc:	48 31 c9             	xor    %rcx,%rcx
+ 2ff:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 305 <debug_counter_0_0+0x9>
+ 305:	0f 33                	rdpmc  
+ 307:	41 89 45 2c          	mov    %eax,0x2c(%r13)
+
+000000000000030b <debug_counter_0_1>:
+ 30b:	48 31 c9             	xor    %rcx,%rcx
+ 30e:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 314 <debug_counter_0_1+0x9>
+ 314:	0f 33                	rdpmc  
+ 316:	41 89 45 30          	mov    %eax,0x30(%r13)
+
+000000000000031a <debug_counter_0_2>:
+ 31a:	48 31 c9             	xor    %rcx,%rcx
+ 31d:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 323 <debug_counter_0_2+0x9>
+ 323:	0f 33                	rdpmc  
+ 325:	41 89 45 34          	mov    %eax,0x34(%r13)
+
+0000000000000329 <debug_counter_0_3>:
+ 329:	48 31 c9             	xor    %rcx,%rcx
+ 32c:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 332 <debug_counter_0_3+0x9>
+ 332:	0f 33                	rdpmc  
+ 334:	41 89 45 38          	mov    %eax,0x38(%r13)
+
+0000000000000338 <debug_counter_0_4>:
+ 338:	48 31 c9             	xor    %rcx,%rcx
+ 33b:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 341 <debug_counter_0_4+0x9>
+ 341:	0f 33                	rdpmc  
+ 343:	41 89 45 3c          	mov    %eax,0x3c(%r13)
+
+0000000000000347 <debug_counter_0_5>:
+ 347:	48 31 c9             	xor    %rcx,%rcx
+ 34a:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 350 <debug_counter_0_5+0x9>
+ 350:	0f 33                	rdpmc  
+ 352:	41 89 45 40          	mov    %eax,0x40(%r13)
+
+0000000000000356 <debug_counter_0_6>:
+ 356:	48 31 c9             	xor    %rcx,%rcx
+ 359:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 35f <debug_counter_0_6+0x9>
+ 35f:	0f 33                	rdpmc  
+ 361:	41 89 45 44          	mov    %eax,0x44(%r13)
+
+0000000000000365 <debug_counter_0_7>:
+ 365:	31 c0                	xor    %eax,%eax
+ 367:	0f a2                	cpuid  
+ 369:	0f 31                	rdtsc  
+ 36b:	41 89 45 24          	mov    %eax,0x24(%r13)
+ 36f:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 376 <debug_counter_0_7+0x11>
+ 376:	48 8b 1d 00 00 00 00 	mov    0x0(%rip),%rbx        # 37d <debug_counter_0_7+0x18>
+ 37d:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 384 <debug_counter_0_7+0x1f>
+ 384:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 38b <debug_counter_0_7+0x26>
+ 38b:	80 3f 00             	cmpb   $0x0,(%rdi)
+ 38e:	74 00                	je     390 <target2>
+
+0000000000000390 <target2>:
+ 390:	48 89 05 00 00 00 00 	mov    %rax,0x0(%rip)        # 397 <target2+0x7>
+ 397:	48 89 1d 00 00 00 00 	mov    %rbx,0x0(%rip)        # 39e <target2+0xe>
+ 39e:	48 89 0d 00 00 00 00 	mov    %rcx,0x0(%rip)        # 3a5 <target2+0x15>
+ 3a5:	48 89 15 00 00 00 00 	mov    %rdx,0x0(%rip)        # 3ac <target2+0x1c>
+ 3ac:	31 c0                	xor    %eax,%eax
+ 3ae:	0f a2                	cpuid  
+ 3b0:	48 31 c0             	xor    %rax,%rax
+ 3b3:	48 31 c9             	xor    %rcx,%rcx
+ 3b6:	0f 31                	rdtsc  
+ 3b8:	41 8b 4d 24          	mov    0x24(%r13),%ecx
+ 3bc:	29 c8                	sub    %ecx,%eax
+ 3be:	43 01 84 b5 bc 00 00 	add    %eax,0xbc(%r13,%r14,4)
+ 3c5:	00 
+ 3c6:	31 c0                	xor    %eax,%eax
+ 3c8:	0f a2                	cpuid  
+ 3ca:	48 31 c9             	xor    %rcx,%rcx
+ 3cd:	48 31 c0             	xor    %rax,%rax
+ 3d0:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 3d6 <target2+0x46>
+ 3d6:	0f 33                	rdpmc  
+ 3d8:	41 8b 4d 28          	mov    0x28(%r13),%ecx
+
+00000000000003dc <debug_counter_1_0>:
+ 3dc:	29 c8                	sub    %ecx,%eax
+ 3de:	43 01 84 b5 8c 03 00 	add    %eax,0x38c(%r13,%r14,4)
+ 3e5:	00 
+ 3e6:	48 31 c9             	xor    %rcx,%rcx
+ 3e9:	48 31 c0             	xor    %rax,%rax
+ 3ec:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 3f2 <debug_counter_1_0+0x16>
+ 3f2:	0f 33                	rdpmc  
+ 3f4:	41 8b 4d 2c          	mov    0x2c(%r13),%ecx
+
+00000000000003f8 <debug_counter_1_1>:
+ 3f8:	29 c8                	sub    %ecx,%eax
+ 3fa:	43 01 84 b5 dc 03 00 	add    %eax,0x3dc(%r13,%r14,4)
+ 401:	00 
+ 402:	48 31 c9             	xor    %rcx,%rcx
+ 405:	48 31 c0             	xor    %rax,%rax
+ 408:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 40e <debug_counter_1_1+0x16>
+ 40e:	0f 33                	rdpmc  
+ 410:	41 8b 4d 30          	mov    0x30(%r13),%ecx
+
+0000000000000414 <debug_counter_1_2>:
+ 414:	29 c8                	sub    %ecx,%eax
+ 416:	43 01 84 b5 2c 04 00 	add    %eax,0x42c(%r13,%r14,4)
+ 41d:	00 
+ 41e:	48 31 c9             	xor    %rcx,%rcx
+ 421:	48 31 c0             	xor    %rax,%rax
+ 424:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 42a <debug_counter_1_2+0x16>
+ 42a:	0f 33                	rdpmc  
+ 42c:	41 8b 4d 34          	mov    0x34(%r13),%ecx
+
+0000000000000430 <debug_counter_1_3>:
+ 430:	29 c8                	sub    %ecx,%eax
+ 432:	43 01 84 b5 7c 04 00 	add    %eax,0x47c(%r13,%r14,4)
+ 439:	00 
+ 43a:	48 31 c9             	xor    %rcx,%rcx
+ 43d:	48 31 c0             	xor    %rax,%rax
+ 440:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 446 <debug_counter_1_3+0x16>
+ 446:	0f 33                	rdpmc  
+ 448:	41 8b 4d 38          	mov    0x38(%r13),%ecx
+
+000000000000044c <debug_counter_1_4>:
+ 44c:	29 c8                	sub    %ecx,%eax
+ 44e:	43 01 84 b5 cc 04 00 	add    %eax,0x4cc(%r13,%r14,4)
+ 455:	00 
+ 456:	48 31 c9             	xor    %rcx,%rcx
+ 459:	48 31 c0             	xor    %rax,%rax
+ 45c:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 462 <debug_counter_1_4+0x16>
+ 462:	0f 33                	rdpmc  
+ 464:	41 8b 4d 3c          	mov    0x3c(%r13),%ecx
+
+0000000000000468 <debug_counter_1_5>:
+ 468:	29 c8                	sub    %ecx,%eax
+ 46a:	43 01 84 b5 1c 05 00 	add    %eax,0x51c(%r13,%r14,4)
+ 471:	00 
+ 472:	48 31 c9             	xor    %rcx,%rcx
+ 475:	48 31 c0             	xor    %rax,%rax
+ 478:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 47e <debug_counter_1_5+0x16>
+ 47e:	0f 33                	rdpmc  
+ 480:	41 8b 4d 40          	mov    0x40(%r13),%ecx
+
+0000000000000484 <debug_counter_1_6>:
+ 484:	29 c8                	sub    %ecx,%eax
+ 486:	43 01 84 b5 6c 05 00 	add    %eax,0x56c(%r13,%r14,4)
+ 48d:	00 
+ 48e:	48 31 c9             	xor    %rcx,%rcx
+ 491:	48 31 c0             	xor    %rax,%rax
+ 494:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 49a <debug_counter_1_6+0x16>
+ 49a:	0f 33                	rdpmc  
+ 49c:	41 8b 4d 44          	mov    0x44(%r13),%ecx
+
+00000000000004a0 <debug_counter_1_7>:
+ 4a0:	29 c8                	sub    %ecx,%eax
+ 4a2:	43 01 84 b5 bc 05 00 	add    %eax,0x5bc(%r13,%r14,4)
+ 4a9:	00 
+ 4aa:	48 8b 05 00 00 00 00 	mov    0x0(%rip),%rax        # 4b1 <debug_counter_1_7+0x11>
+ 4b1:	48 8b 1d 00 00 00 00 	mov    0x0(%rip),%rbx        # 4b8 <debug_counter_1_7+0x18>
+ 4b8:	48 8b 0d 00 00 00 00 	mov    0x0(%rip),%rcx        # 4bf <debug_counter_1_7+0x1f>
+ 4bf:	48 8b 15 00 00 00 00 	mov    0x0(%rip),%rdx        # 4c6 <debug_counter_1_7+0x26>
+ 4c6:	41 ff cc             	dec    %r12d
+ 4c9:	0f 85 f1 fd ff ff    	jne    2c0 <REPETITIONS1LOOP>
+
+00000000000004cf <THREAD2_END>:
+ 4cf:	31 c0                	xor    %eax,%eax
+ 4d1:	0f a2                	cpuid  
+ 4d3:	0f 31                	rdtsc  
+ 4d5:	41 29 45 00          	sub    %eax,0x0(%r13)
+ 4d9:	31 c0                	xor    %eax,%eax
+ 4db:	0f a2                	cpuid  
+ 4dd:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 4e3 <THREAD2_END+0x14>
+ 4e3:	0f 33                	rdpmc  
+ 4e5:	41 29 45 04          	sub    %eax,0x4(%r13)
+ 4e9:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 4ef <THREAD2_END+0x20>
+ 4ef:	0f 33                	rdpmc  
+ 4f1:	41 29 45 08          	sub    %eax,0x8(%r13)
+ 4f5:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 4fb <THREAD2_END+0x2c>
+ 4fb:	0f 33                	rdpmc  
+ 4fd:	41 29 45 0c          	sub    %eax,0xc(%r13)
+ 501:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 507 <THREAD2_END+0x38>
+ 507:	0f 33                	rdpmc  
+ 509:	41 29 45 10          	sub    %eax,0x10(%r13)
+ 50d:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 513 <THREAD2_END+0x44>
+ 513:	0f 33                	rdpmc  
+ 515:	41 29 45 14          	sub    %eax,0x14(%r13)
+ 519:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 51f <THREAD2_END+0x50>
+ 51f:	0f 33                	rdpmc  
+ 521:	41 29 45 18          	sub    %eax,0x18(%r13)
+ 525:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 52b <THREAD2_END+0x5c>
+ 52b:	0f 33                	rdpmc  
+ 52d:	41 29 45 1c          	sub    %eax,0x1c(%r13)
+ 531:	8b 0d 00 00 00 00    	mov    0x0(%rip),%ecx        # 537 <THREAD2_END+0x68>
+ 537:	0f 33                	rdpmc  
+ 539:	41 29 45 20          	sub    %eax,0x20(%r13)
+ 53d:	31 c0                	xor    %eax,%eax
+ 53f:	0f a2                	cpuid  
+ 541:	41 8b 45 00          	mov    0x0(%r13),%eax
+ 545:	f7 d8                	neg    %eax
+ 547:	41 2b 45 48          	sub    0x48(%r13),%eax
+ 54b:	43 89 44 b5 6c       	mov    %eax,0x6c(%r13,%r14,4)
+ 550:	41 8b 45 04          	mov    0x4(%r13),%eax
+ 554:	f7 d8                	neg    %eax
+ 556:	41 2b 45 4c          	sub    0x4c(%r13),%eax
+ 55a:	43 89 84 b5 0c 01 00 	mov    %eax,0x10c(%r13,%r14,4)
+ 561:	00 
+ 562:	41 8b 45 08          	mov    0x8(%r13),%eax
+ 566:	f7 d8                	neg    %eax
+ 568:	41 2b 45 50          	sub    0x50(%r13),%eax
+ 56c:	43 89 84 b5 5c 01 00 	mov    %eax,0x15c(%r13,%r14,4)
+ 573:	00 
+ 574:	41 8b 45 0c          	mov    0xc(%r13),%eax
+ 578:	f7 d8                	neg    %eax
+ 57a:	41 2b 45 54          	sub    0x54(%r13),%eax
+ 57e:	43 89 84 b5 ac 01 00 	mov    %eax,0x1ac(%r13,%r14,4)
+ 585:	00 
+ 586:	41 8b 45 10          	mov    0x10(%r13),%eax
+ 58a:	f7 d8                	neg    %eax
+ 58c:	41 2b 45 58          	sub    0x58(%r13),%eax
+ 590:	43 89 84 b5 fc 01 00 	mov    %eax,0x1fc(%r13,%r14,4)
+ 597:	00 
+ 598:	41 8b 45 14          	mov    0x14(%r13),%eax
+ 59c:	f7 d8                	neg    %eax
+ 59e:	41 2b 45 5c          	sub    0x5c(%r13),%eax
+ 5a2:	43 89 84 b5 4c 02 00 	mov    %eax,0x24c(%r13,%r14,4)
+ 5a9:	00 
+ 5aa:	41 8b 45 18          	mov    0x18(%r13),%eax
+ 5ae:	f7 d8                	neg    %eax
+ 5b0:	41 2b 45 60          	sub    0x60(%r13),%eax
+ 5b4:	43 89 84 b5 9c 02 00 	mov    %eax,0x29c(%r13,%r14,4)
+ 5bb:	00 
+ 5bc:	41 8b 45 1c          	mov    0x1c(%r13),%eax
+ 5c0:	f7 d8                	neg    %eax
+ 5c2:	41 2b 45 64          	sub    0x64(%r13),%eax
+ 5c6:	43 89 84 b5 ec 02 00 	mov    %eax,0x2ec(%r13,%r14,4)
+ 5cd:	00 
+ 5ce:	41 8b 45 20          	mov    0x20(%r13),%eax
+ 5d2:	f7 d8                	neg    %eax
+ 5d4:	41 2b 45 68          	sub    0x68(%r13),%eax
+ 5d8:	43 89 84 b5 3c 03 00 	mov    %eax,0x33c(%r13,%r14,4)
+ 5df:	00 
+ 5e0:	41 ff c6             	inc    %r14d
+ 5e3:	41 83 fe 14          	cmp    $0x14,%r14d
+ 5e7:	0f 82 2f fc ff ff    	jb     21c <TEST_LOOP_2>
+
+00000000000005ed <EXITALL1>:
+ 5ed:	49 8b a5 10 06 00 00 	mov    0x610(%r13),%rsp
+ 5f4:	9b db e3             	finit  
+ 5f7:	fc                   	cld    
+ 5f8:	c5 fc 77             	vzeroall 
+
+00000000000005fb <EXITALL2>:
+ 5fb:	b8 14 00 00 00       	mov    $0x14,%eax
+ 600:	41 5f                	pop    %r15
+ 602:	41 5e                	pop    %r14
+ 604:	41 5d                	pop    %r13
+ 606:	41 5c                	pop    %r12
+ 608:	5d                   	pop    %rbp
+ 609:	5b                   	pop    %rbx
+ 60a:	c3                   	ret    
